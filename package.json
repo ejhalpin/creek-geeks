@@ -1,0 +1,32 @@
+{
+  "name": "creek-geeks",
+  "version": "1.0.0",
+  "description": "a static info page backed by a rest api with a custom content management interface",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejhalpin/creek-geeks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejhalpin/creek-geeks/issues"
+  },
+  "homepage": "https://github.com/ejhalpin/creek-geeks#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0"
+  }
+}

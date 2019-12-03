@@ -1,0 +1,40 @@
+html,body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+#root{
+  flex:1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.parent{
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: url("../../assets/images/little-sugar-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0.75rem 0;
+  text-shadow: 0 1px 2px #000;
+  color: rgb(53,46,32);
+}
+
+a:hover{
+  opacity:0.8;
+}
